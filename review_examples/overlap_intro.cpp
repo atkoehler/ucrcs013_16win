@@ -1,19 +1,17 @@
-// what is the point of the assignment (what does it do)
-find sequences that match in DNA
+// Adam Koehler
+// CS 013 Winter 2016
+// In class assignment & exercise - Overlap
 
+// what is the point of the assignment (what does it do)
+
+// what has been simplified?
 
 // which page is the algorithm on ?
-verbal description - your assignment page
-visual description - examples page
+// is the algorithm in English, pseudocode, or C++?
 
-// what string functions do we use?
-hints & tips
-size()
-substr()
-find()
+// what string functions do we use, where in the specification is this stated?
 
+// what C++ syntax pieces will we need? 
+// will we require loops?
 
-// will we require loops, or other C++ structures
-while() --> go over list of words
-if-else
-for --> string iteration
+// do we have any knowledge gaps that prohibit implementation?
