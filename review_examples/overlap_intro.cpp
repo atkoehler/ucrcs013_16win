@@ -18,7 +18,7 @@ English
 // what string functions do we use, where in the 
 // specification is this stated?
 page 3 of 3
-find()
+find() <--- don't need find
 size()/length()
 substr()
 
