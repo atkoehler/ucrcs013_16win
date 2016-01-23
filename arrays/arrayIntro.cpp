@@ -16,8 +16,18 @@ void display(int arr[], int size)
 // selection sort
 void selSort(int arr[], int size)
 {
-    
-    
+    for (int i = 0; i < size; i++)
+    {
+        int small = i;
+        for (int j=i+1; j < size; j++)
+        {
+            if (arr[j] < arr[small])
+            {
+                small = j;
+            }
+        }
+        swap(arr[i], arr[small]);
+    }
 }
 
 int main()
