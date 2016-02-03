@@ -4,29 +4,66 @@
 
 #include <iostream>
 using namespace std;
-
+#include <unistd.h>
 
 // given n, return n!
 int factorial (int n)
 {
-    // write the code for this function
-    return 0;
+    // int fac = 1;
+    // // iterative
+    // for (int i=1; i <= n; i++)
+    // {
+    //     fac *= i;
+    // }
+    
+    // recusion - 2 things
+    
+    // base case
+    // n is 0 - return 1
+    if (n == 0)
+    {
+        return 1;
+    }
+    
+    // recursive step 
+    // getting a slightly smaller problem and solving that
+    // n
+    // * n-1*n-2*...*1
+    // cout << n << endl;
+    // sleep(1);
+    return n * factorial(n-1);
 }
 
 int getNum()
 {
-    int num;
+    int n;
     
-    // Acquire non-negative integer
-    do
+    // // Acquire non-negative integer
+    // do
+    // {
+    //     cout << "Enter a non-negative integer: ";
+    //     cin >> num;
+    //     cout << endl;
+    // }while (num < 0);
+    
+    // return num;
+    
+    cin >> n;
+    
+    // base case
+    if (n >= 0)
     {
-        cout << "Enter a non-negative integer: ";
-        cin >> num;
-        cout << endl;
-    }while (num < 0);
+        return n;
+    }
     
-    return num;
+    return getNum();
 }
+
+// 1. getnum
+// 2. -5
+// 3. getnum
+// 4. 5
+
 
 int main()
 {
