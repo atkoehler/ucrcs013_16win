@@ -1,5 +1,5 @@
 /// @author Adam Koehler
-/// @date March 2, 2016
+/// @date March 2 & 4, 2016
 /// @brief Fun with pointers and trains!
 
 #include "car.h"
@@ -35,6 +35,7 @@ class Train
         // Should this add to the 
         //      ending or beginning?
         void addCar(Car *);
+        void deleteCar(int);
         
         // Display the train
         // nameOfCar <- nameOfCar

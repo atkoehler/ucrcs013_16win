@@ -1,5 +1,5 @@
 /// @author Adam Koehler
-/// @date March 2, 2016
+/// @date March 2 & 4, 2016
 /// @brief Fun with pointers and trains!
 
 #include <iostream>
@@ -20,14 +20,14 @@ Train::Train()
 void Train::display()
 {
     Car *cur = this->trainCarsHead;
+    
     while(cur != 0)
     {
         cout << cur->getName();
         cur = cur->nextCar;
-        
         if (cur != 0)
         {
-            cout << " <- ";
+            cout << " -> ";
         }
     }
 }
@@ -47,6 +47,29 @@ void Train::addCar(Car *toAdd)
         // Non-empty list should not touch tail
         temp = trainCarsHead;
         trainCarsHead = toAdd;
-        toAdd->nextCar = temp;
+        toAdd->nextCar = temp;//setNextCar(temp);
     }
+}
+
+void Train::deleteCar(int carNum)
+{
+    // TODO: check for special case for head or tail depending on list 
+    
+    // find previous node
+    int i = 0;
+    Car *prev = trainCarsHead;
+    for(i = 1; i + 1 < carNum; i++)
+    {
+        prev = prev->nextCar;
+    }
+    
+    // Store the node to be deleted in a temporary variable
+    Car *temp;
+    temp = prev->nextCar;
+    
+    // Reassign links of linked list to skip deleted node
+    prev->nextCar = temp->nextCar;
+    
+    // delete node
+    delete temp;
 }

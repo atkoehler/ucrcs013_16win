@@ -21,8 +21,22 @@ class Car
         
     public:
         Car();
+        Car(string);
         double getWeight() const;
         double getMaxSpeed() const;
         string getName() const;
+        void setNextCar(Car *);
+        Car* getNextCar() const;
+        void setName(const string &);
+};
+
+class EngineCar : public Car
+{
+    private:
+        double fuelCapacity;
+        double fuelRemaining;
+    
+    public:
+        EngineCar();
 };
 #endif
