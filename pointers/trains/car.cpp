@@ -29,6 +29,11 @@ string Car::getName() const
     return this->name;
 }
 
+double Car::getWeight() const
+{
+    return this->weight;
+}
+
 void Car::setName(const string &n)
 {
     this->name = n;
@@ -48,4 +53,16 @@ EngineCar::EngineCar() : Car("engine")
     // setName("engine");
     fuelCapacity = 25;
     fuelRemaining = 25;
+}
+
+
+PeopleCar::PeopleCar() : Car("people")
+{
+    numSeats = 25;
+    numPeople = 10;
+}
+
+double PeopleCar::getWeight() const
+{
+    return this->numPeople * 111;
 }

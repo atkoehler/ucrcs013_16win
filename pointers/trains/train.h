@@ -24,21 +24,23 @@ class Train
         // Car* trainCarsTail;
         
         // Need a link to the head of the list
-        Car* trainCarsHead;        
+        Car* trainCarsHead;
+        Car* trainCarsTail;
     
     public:
         Train();
         double getWeight();
         double getSpeed();
-        int getLength();
+        int getLength() const;
         
-        // Should this add to the 
-        //      ending or beginning?
-        void addCar(Car *);
+        void addCarFront(Car *);
+        void addCarBack(Car *);
         void deleteCar(int);
+        void deleteFirstCar();
         
         // Display the train
-        // nameOfCar <- nameOfCar
-        void display();
+        // nameOfCar -> nameOfCar
+        void display() const;
+        void displayWeights() const;
 };
 #endif

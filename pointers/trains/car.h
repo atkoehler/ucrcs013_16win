@@ -22,7 +22,7 @@ class Car
     public:
         Car();
         Car(string);
-        double getWeight() const;
+        virtual double getWeight() const;
         double getMaxSpeed() const;
         string getName() const;
         void setNextCar(Car *);
@@ -38,5 +38,18 @@ class EngineCar : public Car
     
     public:
         EngineCar();
+};
+
+class PeopleCar : public Car
+{ 
+    private:
+        int numSeats;
+        int numPeople;
+    public:
+        PeopleCar();
+        PeopleCar(int, int);
+        int getNumPeople() const;
+        void setNumPeople();
+        double getWeight() const;
 };
 #endif
