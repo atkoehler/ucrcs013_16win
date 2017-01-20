@@ -10,24 +10,23 @@
   * cannot use arr.size() or arr.push_back(43)
 
 * Declaring an array: int name[100] = {1, 2, 3, 4};
- --- first 4 elements will be 1, 2, 3, 4
- --- remaining elements are initialized to zero 
-        because you initialized at least 1 to a known 
- --- quick zero init: int name[100] = {0}; // 100 spots containing 0 value
- --- int name[100]; // 100 spots of unknwon values
+  * first 4 elements will be 1, 2, 3, 4
+  * remaining elements are initialized to zero because you initialized at least 1 to a known 
+  * quick zero init: int name[100] = {0}; // 100 spots containing 0 value
+  * int name[100]; // 100 spots of unknwon values
         
 * Arrays have a fixed size
- --- Often set up a capacity and a size, where size is the current size
+  * Often set up a capacity and a size, where size is the current size
 
 * A function cannot return an array
 
 * Assignment is different
- --- v1 = v2;        // allowed vectors
- --- arr1 = arr2;    // syntax error
+  * v1 = v2;        // allowed vectors
+  * arr1 = arr2;    // syntax error
 
 * Output
- --- cout << v1 << endl; // sytax error
- --- cout << arr1 << endl; // allowed, but not useful to user
+  * cout << v1 << endl; // sytax error
+  * cout << arr1 << endl; // allowed, but not useful to user
 
 * Arrays are already a reference, & not needed when passed to a function
- --- void myFunc(int arr[]) NOT void myFunc(int &arr[])
+  * void myFunc(int arr[]) NOT void myFunc(int &arr[])
