@@ -28,5 +28,5 @@
   * cout << v1 << endl; // sytax error
   * cout << arr1 << endl; // allowed, but not useful to user
 
-* Arrays are already a reference, & not needed when passed to a function
+* Arrays are already a reference, & not needed when passed to a function or defining a function header
   * void myFunc(int arr[]) NOT void myFunc(int &arr[])
