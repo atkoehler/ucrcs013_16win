@@ -1,5 +1,5 @@
 /// @file practiceQuestion_week1.cpp
-/// @brief Solution to midterm example question week 1.
+/// @brief Solution to midterm example question for week 1.
 ///     The solution is only the removeVal function.
 /// @author Adam Koehler
 /// @date January 13, 2017
