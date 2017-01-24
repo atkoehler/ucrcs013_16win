@@ -105,5 +105,9 @@ void splitV2(char str[], char a[], char b[], char delim)
         }
         x++;
     }
+    
+    // ERROR no null termination
+    // a[ca] = '\0';
+    // b[cb] = '\0';
    
 }
