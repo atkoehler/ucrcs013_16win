@@ -82,6 +82,20 @@ void splitV1(char str[], char a[], char b[], char delim)
     }
 }
 
+// Test case ideas to check for proper null termination
+/*
+    loop over "C string" to print every element of the array
+        when it gets to its max quantity N, if no \0 then not proper
+
+    
+
+
+
+*/
+
+
+
+
 void splitV2(char str[], char a[], char b[], char delim) 
 {
     bool foundDelimiter = false;
