@@ -59,7 +59,7 @@ class Point
         //      we will always pass by reference. Which leaves
         //      the choice of const or not, depending on whether
         //      the function changes values or just uses the object.
-        double distance(const Point &);
+        double distance(const Point &) const;
         
         // Alternative prototype for when we use pointers.
         // double distance(Point *);
@@ -111,7 +111,7 @@ void Point::move(double dx, double dy)
 
 
 // Using reference parameters
-double Point::distance(const Point &p)
+double Point::distance(const Point &p) const
 {
     // const needs to be for all p calls
     //      so getX and getY need to be const
