@@ -57,12 +57,12 @@ void printCstring(const char a[])
 
 void printCStringPtr(const char *a)
 {
-    if(a[0] == '\0')
+    if(*a == '\0')
     {
         return;
     }  
     
-    cout << a[0] << ' ';
+    cout << *a << ' ';
     
     // use pointer math to move!
     //  moves 1 unit (which is a char)
