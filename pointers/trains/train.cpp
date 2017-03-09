@@ -10,11 +10,10 @@ using namespace std;
 
 Train::Train()
 {
-    // weight = 0;
+    weight = 0;
     speed = 0;
-    numCars = 0;
     trainCarsHead = 0;
-    // trainCarsTail = 0;
+    trainCarsTail = 0;
 }
 
 void Train::display() const
@@ -37,20 +36,20 @@ Car* Train::getFirstCar() const
     return this->trainCarsHead;
 }
 
-// Train & Train::operator=(const Train &rhs) {
-//     if (this != &rhs) {
-//         // what if some part of the train already exists?!?
-//         //      we cannot just add nodes to this train or else
-//         //      it won't be a copy
+Train & Train::operator=(const Train &rhs) {
+    if (this != &rhs) {
+        // what if some part of the train already exists?!?
+        //      we cannot just add nodes to this train or else
+        //      it won't be a copy
         
-//         // go through the rhs of operator and create new nodes for each
-//         // car in the train
-//         for (Car *i = rhs.trainCarsHead; i != 0; i = i->nextCar) {
-//             addCarBack(new Car(*i));
-//         }
-//     }
-//     return *this;
-// }
+        // go through the rhs of operator and create new nodes for each
+        // car in the train
+        for (Car *i = rhs.trainCarsHead; i != 0; i = i->nextCar) {
+            addCarBack(new Car(*i));
+        }
+    }
+    return *this;
+}
 
 void Train::displayWeights() const
 {
@@ -135,35 +134,5 @@ void Train::deleteCar(int carNum)
 
 void Train::deleteFirstCar()
 {
-    if (trainCarsHead == 0) {
-        return;
-    }
-    
-    if (trainCarsHead == trainCarsTail)
-    {
-        delete trainCarsHead;
-        trainCarsHead = 0;
-        trainCarsTail = 0;
-    }
-    else {
-        Car *temp = trainCarsHead;
-        trainCarsHead = trainCarsHead->nextCar;
-        delete temp;
-    }
-}
-
-// A better way with linked lists is to have a data member
-//      that tracks the length of the list and is added to
-//      or subtracted from when nodes are added or deleted.
-int Train::getLength() const
-{
-    int count = 0;
-    Car *cur = this->trainCarsHead;
-    
-    while(cur != 0)
-    {
-        count++;
-        cur = cur->nextCar;
-    }    
-    return count;
+    /* TODO */
 }

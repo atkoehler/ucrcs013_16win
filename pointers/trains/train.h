@@ -12,9 +12,9 @@ using namespace std;
 class Train
 {
     private:
-        // double weight;
+        double weight;
         double speed;
-        int numCars;
+    
         
         // Linked list of train cars!
 
@@ -31,7 +31,6 @@ class Train
         Train();
         double getWeight() const;
         double getSpeed() const;
-        int getLength() const;
         
         Car* getFirstCar() const;
         Train & operator=(const Train &rhs);
