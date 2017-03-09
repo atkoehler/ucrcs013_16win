@@ -55,12 +55,26 @@ void printCstring(const char a[])
    printCstringHelp(a, 0);
 }
 
+void printCStringPtr(const char *a)
+{
+    if(a[0] == '\0')
+    {
+        return;
+    }  
+    
+    cout << a[0] << ' ';
+    
+    // use pointer math to move!
+    //  moves 1 unit (which is a char)
+    printCStringPtr(a + 1);
+}
+
 // simple main to call our function
 int main()
 {
     char c[4] = "bob";
 
-    printCstring(c);   
+    printCStringPtr(c);   
     cout << endl;
 
     return 0;
