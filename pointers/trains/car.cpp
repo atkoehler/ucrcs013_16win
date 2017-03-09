@@ -24,6 +24,13 @@ Car::Car(string n)
     nextCar = 0;
 }
 
+Car::Car(const Car &cpy) {
+   name = cpy.name;
+   weight = cpy.weight;
+   maxSpeed = cpy.maxSpeed;
+   nextCar = cpy.nextCar;
+}
+
 string Car::getName() const
 {
     return this->name;

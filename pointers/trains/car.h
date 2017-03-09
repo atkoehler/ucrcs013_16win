@@ -22,6 +22,7 @@ class Car
     public:
         Car();
         Car(string);
+        Car(const Car &);
         virtual double getWeight() const;
         double getMaxSpeed() const;
         string getName() const;

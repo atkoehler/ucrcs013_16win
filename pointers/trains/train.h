@@ -29,9 +29,12 @@ class Train
     
     public:
         Train();
-        double getWeight();
-        double getSpeed();
+        double getWeight() const;
+        double getSpeed() const;
         int getLength() const;
+        
+        Car* getFirstCar() const;
+        Train & operator=(const Train &rhs);
         
         void addCarFront(Car *);
         void addCarBack(Car *);

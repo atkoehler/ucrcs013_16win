@@ -32,6 +32,26 @@ void Train::display() const
     }
 }
 
+Car* Train::getFirstCar() const
+{
+    return this->trainCarsHead;
+}
+
+// Train & Train::operator=(const Train &rhs) {
+//     if (this != &rhs) {
+//         // what if some part of the train already exists?!?
+//         //      we cannot just add nodes to this train or else
+//         //      it won't be a copy
+        
+//         // go through the rhs of operator and create new nodes for each
+//         // car in the train
+//         for (Car *i = rhs.trainCarsHead; i != 0; i = i->nextCar) {
+//             addCarBack(new Car(*i));
+//         }
+//     }
+//     return *this;
+// }
+
 void Train::displayWeights() const
 {
     Car *cur = this->trainCarsHead;
