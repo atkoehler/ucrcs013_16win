@@ -7,7 +7,8 @@
 using namespace std;
 class Car
 {
-    private:
+    
+    protected:
         string name;
         double weight;
         double maxSpeed;
@@ -25,7 +26,7 @@ class Car
         Car(const Car &);
         virtual double getWeight() const;
         double getMaxSpeed() const;
-        string getName() const;
+        virtual string getName() const;
         void setNextCar(Car *);
         Car* getNextCar() const;
         void setName(const string &);
@@ -41,7 +42,13 @@ class EngineCar : public Car
         EngineCar();
 };
 
-class PeopleCar : public Car
+class TransportCar
+{
+    private:
+        int occupants;
+};
+
+class PeopleCar : public Car, public TransportCar
 { 
     private:
         int numSeats;
@@ -50,7 +57,7 @@ class PeopleCar : public Car
         PeopleCar();
         PeopleCar(int, int);
         int getNumPeople() const;
-        void setNumPeople();
+        void setNumPeople(int);
         double getWeight() const;
 };
 #endif

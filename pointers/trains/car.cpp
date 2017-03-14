@@ -57,6 +57,8 @@ void Car::setNextCar(Car * t)
 
 EngineCar::EngineCar() : Car("engine")
 {
+    // how to access parent's function
+    //this.name = Car::getName();
     // setName("engine");
     fuelCapacity = 25;
     fuelRemaining = 25;

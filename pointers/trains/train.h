@@ -37,7 +37,11 @@ class Train
         
         void addCarFront(Car *);
         void addCarBack(Car *);
+        
+        
+        // TODO: implement
         void deleteCar(int);
+        
         void deleteFirstCar();
         
         // Display the train

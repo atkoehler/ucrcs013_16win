@@ -61,29 +61,29 @@ int main()
     // EngineCar *m1;
     // Car *m2;
     
-    // // Need to do "new" for each add so that the same node isn't being added
-    // // First group of adds
-    // m1 = new EngineCar();
-    // myTrain.addCarFront(m1);
-    // m2 = new Car();
-    // myTrain.addCarFront(m2);
-    // m2 = new Car();
-    // myTrain.addCarFront(m2); // Line A
+    // Need to do "new" for each add so that the same node isn't being added
+    // First group of adds
+    m1 = new EngineCar();
+    myTrain.addCarFront(m1);
+    m2 = new Car();
+    myTrain.addCarFront(m2);
+    m2 = new Car();
+    myTrain.addCarFront(m2); // Line A
     
-    // cout << "Current train: " << endl;
-    // myTrain.display();
-    // cout << endl << "End of display" << endl;
+    cout << "Current train: " << endl;
+    myTrain.display();
+    cout << endl << "End of display" << endl;
     
-    // // // Second group of adds with a delete
-    // m1 = new EngineCar();
-    // myTrain.addCarFront(m1);
-    // myTrain.deleteCar(3);
-    // m2 = new Car();
-    // myTrain.addCarFront(m2);
+    // // Second group of adds with a delete
+    m1 = new EngineCar();
+    myTrain.addCarFront(m1);
+    myTrain.deleteCar(3);
+    m2 = new Car();
+    myTrain.addCarFront(m2);
     
-    // cout << "Current train: " << endl;
-    // myTrain.display();
-    // cout << endl << "End of display" << endl;
+    cout << "Current train: " << endl;
+    myTrain.display();
+    cout << endl << "End of display" << endl;
 
     return 0;
 }
