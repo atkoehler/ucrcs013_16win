@@ -16,6 +16,67 @@ Train::Train()
     trainCarsTail = 0;
 }
 
+// This is a bad implementation
+//  of getLength because calculating
+//  the length should not change the
+//  list, but without const protecting
+//  private data fields then a function
+//  is technically allowed to change
+//  their values, even though it is 
+//  poor technique since calculating 
+//  how many train cars exist should
+//  now change the list at all.
+int Train::getLength()
+{
+    // base case:
+    //  if the head pointer is set to null
+    //  then the train is empty and there
+    //  are no cars
+    if (0 == trainCarsHead)
+    {
+        return 0;
+    }
+    
+    // declare and initialize counter
+    int sum = 0;
+    
+    // Create a temporary pointer
+    Car *tp = 0;
+    
+    // Store the head of the list
+    //      before "destroying" it
+    tp = trainCarsHead;
+    
+    // move the head of the list
+    //  to the next car, effectively
+    //  destroying your proper list
+    trainCarsHead = trainCarsHead->nextCar;
+    
+    // recursively call getLength to 
+    //      calculate the length of the
+    //      train that is 1 car shorter.
+    //  Add 1 to account for the train car
+    //      that was just removed by 
+    //      moving head.
+    //  Store in sum.
+    sum = 1 + getLength();
+    
+    // once we return from the above 
+    //  getLength() call, we need
+    //  to move the head pointer back
+    //  effectively relinking that car
+    //  into the linked list
+    // this is why we stored head earlier
+    trainCarsHead = tp;
+    
+    // now that we relinked the car we
+    //  clipped off or unlinked, we 
+    //  can return the current sum
+    //  which will have the current
+    //  count for train cars
+    return sum;
+}
+
 void Train::display() const
 {
     Car *cur = this->trainCarsHead;

@@ -39,10 +39,9 @@ class Train
         void addCarBack(Car *);
         
         
-        // TODO: implement
         void deleteCar(int);
-        
         void deleteFirstCar();
+        int getLength();
         
         // Display the train
         // nameOfCar -> nameOfCar

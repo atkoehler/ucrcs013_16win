@@ -70,9 +70,11 @@ int main()
     m2 = new Car();
     myTrain.addCarFront(m2); // Line A
     
+    
     cout << "Current train: " << endl;
     myTrain.display();
     cout << endl << "End of display" << endl;
+    cout << myTrain.getLength() << endl;
     
     // // Second group of adds with a delete
     m1 = new EngineCar();
